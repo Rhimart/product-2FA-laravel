@@ -61,6 +61,7 @@ class ProductsController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'category' => $request->category,
+            'quantity' => $request->quantity,
         ]);
         return $product;
     }
@@ -115,6 +116,7 @@ class ProductsController extends Controller
         $product->name = $request->name;
         $product->price = $request->price;
         $product->category = $request->category;
+        $product->quantity = $request->quantity;
         $product->save();
         return $product;
 
